@@ -1,3 +1,4 @@
+//優先權大的字符會壓在上面
 #include <stdio.h>
 #include <ctype.h>
 char Stack[100];
@@ -43,15 +44,18 @@ int main(){
                 printf("%c",x);
             }
         }
-        else{
+        else if(Stack[top]=='+'||Stack[top]=='-'||Stack[top]=='*'||Stack[top]=='/'||Stack[top]=='('){
             while(Priority(Stack[top])>=Priority(*e)){
               printf("%c",Pop());
             }
+           push(*e);
+        }
+        else{
             push(*e);
         }
         e++;
     }
     while(top!=-1){
-      printf("%c ",Pop());
+      printf("%c",Pop());
     }
 }
