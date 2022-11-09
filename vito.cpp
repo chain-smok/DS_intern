@@ -3,13 +3,13 @@ using namespace std;
 int main(){
   int n,m,i,j,tmp,tmpx;
   int s[500]={0};
-  cout<<"輸入的資料數量:";
+  cout<<"??J??????q:";
   cin>>n;
   while(n--){
-   cout<<"有幾個親戚:";
+   cout<<"???X????:";
    cin>>m;
    for(i=0;i<m;i++){
-    cout<<"輸入親戚家門牌號碼:";
+    cout<<"??J????a???P???X:";
     cin>>s[i];
    }
    for(i=0;i<m;i++){
@@ -26,11 +26,11 @@ int main(){
    }
    int mid,sum=0;
    mid=s[m/2];
-   //由小排到大
+   //??p???j
   for(i=0;i<m;i++){
     sum+=abs(mid-s[i]);
   }
-   cout<<"距離的和最小為:";
+   cout<<"?Z?????M??p??:";
    cout<<sum<<endl;
   }
 }
